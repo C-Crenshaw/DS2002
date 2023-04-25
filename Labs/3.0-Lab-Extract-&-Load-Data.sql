@@ -69,7 +69,7 @@ select * from events_json limit 10;
 
 -- COMMAND ----------
 
-create table if not exists events_raw
+create or replace table events_raw
     (key BINARY, offset BIGINT, partition INT, timestamp BIGINT, topic STRING, value BINARY)
 
 -- COMMAND ----------
